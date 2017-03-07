@@ -198,7 +198,7 @@ class Mp4ToMpegDash
   def upload_files_to_s3
     uuid = SecureRandom.uuid
     s3 = AWS::S3.new(access_key_id: 'your-acess-key-id', secret_access_key: 'your-secret-access-key')
-    bucket = s3.buckets['bigmarker-development']
+    bucket = s3.buckets['your-s3-bucket']
 
     vers = @versions << 'audio'
     vers.each do |version|
